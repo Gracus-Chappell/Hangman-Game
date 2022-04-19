@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./css/main.css"> 
+</head>
+<body>
+    <div id = "hiddenWord"></div>
+    <button id = "wordGenerator" onclick="generateWord()">Generate a word!</button>
+    <div id= "keyboard">
+        <button id = "aBtn" value = "a" onclick = "buttonLetters(this.value, this.id)">A</button>
+        <button id = "bBtn" value = "b" onclick = "buttonLetters(this.value, this.id)">B</button>
+        <button id = "cBtn" value = "c" onclick = "buttonLetters(this.value, this.id)">C</button>
+        <button id = "dBtn" value = "d" onclick = "buttonLetters(this.value, this.id)">D</button>
+        <button id = "eBtn" value = "e" onclick = "buttonLetters(this.value, this.id)">E</button>
+        <button id = "fBtn" value = "f" onclick = "buttonLetters(this.value, this.id)">F</button>
+        <button id = "gBtn" value = "g" onclick = "buttonLetters(this.value, this.id)">G</button>
+        <button id = "hBtn" value = "h" onclick = "buttonLetters(this.value, this.id)">H</button>
+        <button id = "iBtn" value = "i" onclick = "buttonLetters(this.value, this.id)">I</button>
+        <button id = "jBtn" value = "j" onclick = "buttonLetters(this.value, this.id)">J</button>
+        <button id = "kBtn" value = "k" onclick = "buttonLetters(this.value, this.id)">K</button>
+        <button id = "lBtn" value = "l" onclick = "buttonLetters(this.value, this.id)">L</button>
+        <button id = "mBtn" value = "m" onclick = "buttonLetters(this.value, this.id)">M</button>
+        <button id = "nBtn" value = "n" onclick = "buttonLetters(this.value, this.id)">N</button>
+        <button id = "oBtn" value = "o" onclick = "buttonLetters(this.value, this.id)">O</button>
+        <button id = "pBtn" value = "p" onclick = "buttonLetters(this.value, this.id)">P</button>
+        <button id = "qBtn" value = "q" onclick = "buttonLetters(this.value, this.id)">Q</button>
+        <button id = "rBtn" value = "r" onclick = "buttonLetters(this.value, this.id)">R</button>
+        <button id = "sBtn" value = "s" onclick = "buttonLetters(this.value, this.id)">S</button>
+        <button id = "tBtn" value = "t" onclick = "buttonLetters(this.value, this.id)">T</button>
+        <button id = "uBtn" value = "u" onclick = "buttonLetters(this.value, this.id)">U</button>
+        <button id = "vBtn" value = "v" onclick = "buttonLetters(this.value, this.id)">V</button>
+        <button id = "wBtn" value = "w" onclick = "buttonLetters(this.value, this.id)">W</button>
+        <button id = "xBtn" value = "x" onclick = "buttonLetters(this.value, this.id)">X</button>
+        <button id = "yBtn" value = "y" onclick = "buttonLetters(this.value, this.id)">Y</button>
+        <button id = "zBtn" value = "z" onclick = "buttonLetters(this.value, this.id)">Z</button>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
