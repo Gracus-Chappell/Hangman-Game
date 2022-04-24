@@ -3,9 +3,11 @@ let answer = "";
 let hiddenAnswer = "";
 
 function generateWord() {
-    let buttons = document.getElementsByTagName("button");
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = false;
+    disableLetters();
+    let letters = document.querySelectorAll(".keyboardLetters");
+    for (keyboardLetters of letters) {
+        keyboardLetters.classList.remove('no-click');
+        keyboardLetters.disabled = false;
     }
     hiddenAnswer = "";
     answer = "";
@@ -15,6 +17,7 @@ function generateWord() {
         hiddenAnswer += "_"
     } 
     document.getElementById("hiddenWord").innerHTML = hiddenAnswer;
+    document.getElementById("wordGenerator").hidden = true;
 }
 
 function buttonLetters(clicked_value, clicked_id) {
@@ -25,9 +28,15 @@ function buttonLetters(clicked_value, clicked_id) {
         hiddenAnswer = (hiddenAnswer.slice(0, i).concat(clicked_value).toUpperCase().concat(hiddenAnswer.slice(i + 1, wordSize))):
         hiddenAnswer = (hiddenAnswer.slice(0, i).concat(clicked_value).concat(hiddenAnswer.slice(i + 1, wordSize))) : 
         console.log("No!");
-        console.log(clicked_value);
-        console.log(clicked_id);
     }
     document.getElementById(clicked_id).disabled = true;
     document.getElementById("hiddenWord").innerHTML = hiddenAnswer;
+    hiddenAnswer.includes("_") ? "" : (document.getElementById("wordGenerator").hidden = false, disableLetters());
+}
+
+function disableLetters() {
+    let letters = document.querySelectorAll('.keyboardLetters')
+    for (keyboardLetters of letters) {
+        keyboardLetters.classList.add("no-click");
+    };
 }
