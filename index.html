@@ -9,34 +9,35 @@
 </head>
 <body>
     <div id = "hiddenWord"></div>
+    <div id = "userAttempts"></div>
     <button id = "wordGenerator" onclick="generateWord()">Generate a word!</button>
     <div id= "keyboard">
-        <button id = "aBtn" class = "keyboardLetters" value = "a" onclick = "buttonLetters(this.value, this.id)">A</button>
-        <button id = "bBtn" class = "keyboardLetters" value = "b" onclick = "buttonLetters(this.value, this.id)">B</button>
-        <button id = "cBtn" class = "keyboardLetters" value = "c" onclick = "buttonLetters(this.value, this.id)">C</button>
-        <button id = "dBtn" class = "keyboardLetters" value = "d" onclick = "buttonLetters(this.value, this.id)">D</button>
-        <button id = "eBtn" class = "keyboardLetters" value = "e" onclick = "buttonLetters(this.value, this.id)">E</button>
-        <button id = "fBtn" class = "keyboardLetters" value = "f" onclick = "buttonLetters(this.value, this.id)">F</button>
-        <button id = "gBtn" class = "keyboardLetters" value = "g" onclick = "buttonLetters(this.value, this.id)">G</button>
-        <button id = "hBtn" class = "keyboardLetters" value = "h" onclick = "buttonLetters(this.value, this.id)">H</button>
-        <button id = "iBtn" class = "keyboardLetters" value = "i" onclick = "buttonLetters(this.value, this.id)">I</button>
-        <button id = "jBtn" class = "keyboardLetters" value = "j" onclick = "buttonLetters(this.value, this.id)">J</button>
-        <button id = "kBtn" class = "keyboardLetters" value = "k" onclick = "buttonLetters(this.value, this.id)">K</button>
-        <button id = "lBtn" class = "keyboardLetters" value = "l" onclick = "buttonLetters(this.value, this.id)">L</button>
-        <button id = "mBtn" class = "keyboardLetters" value = "m" onclick = "buttonLetters(this.value, this.id)">M</button>
-        <button id = "nBtn" class = "keyboardLetters" value = "n" onclick = "buttonLetters(this.value, this.id)">N</button>
-        <button id = "oBtn" class = "keyboardLetters" value = "o" onclick = "buttonLetters(this.value, this.id)">O</button>
-        <button id = "pBtn" class = "keyboardLetters" value = "p" onclick = "buttonLetters(this.value, this.id)">P</button>
-        <button id = "qBtn" class = "keyboardLetters" value = "q" onclick = "buttonLetters(this.value, this.id)">Q</button>
-        <button id = "rBtn" class = "keyboardLetters" value = "r" onclick = "buttonLetters(this.value, this.id)">R</button>
-        <button id = "sBtn" class = "keyboardLetters" value = "s" onclick = "buttonLetters(this.value, this.id)">S</button>
-        <button id = "tBtn" class = "keyboardLetters" value = "t" onclick = "buttonLetters(this.value, this.id)">T</button>
-        <button id = "uBtn" class = "keyboardLetters" value = "u" onclick = "buttonLetters(this.value, this.id)">U</button>
-        <button id = "vBtn" class = "keyboardLetters" value = "v" onclick = "buttonLetters(this.value, this.id)">V</button>
-        <button id = "wBtn" class = "keyboardLetters" value = "w" onclick = "buttonLetters(this.value, this.id)">W</button>
-        <button id = "xBtn" class = "keyboardLetters" value = "x" onclick = "buttonLetters(this.value, this.id)">X</button>
-        <button id = "yBtn" class = "keyboardLetters" value = "y" onclick = "buttonLetters(this.value, this.id)">Y</button>
-        <button id = "zBtn" class = "keyboardLetters" value = "z" onclick = "buttonLetters(this.value, this.id)">Z</button>
+        <button id = "aBtn" class = "keyboardLetters" value = "a" onclick = "lettersClicked(this.value, this.id)">A</button>
+        <button id = "bBtn" class = "keyboardLetters" value = "b" onclick = "lettersClicked(this.value, this.id)">B</button>
+        <button id = "cBtn" class = "keyboardLetters" value = "c" onclick = "lettersClicked(this.value, this.id)">C</button>
+        <button id = "dBtn" class = "keyboardLetters" value = "d" onclick = "lettersClicked(this.value, this.id)">D</button>
+        <button id = "eBtn" class = "keyboardLetters" value = "e" onclick = "lettersClicked(this.value, this.id)">E</button>
+        <button id = "fBtn" class = "keyboardLetters" value = "f" onclick = "lettersClicked(this.value, this.id)">F</button>
+        <button id = "gBtn" class = "keyboardLetters" value = "g" onclick = "lettersClicked(this.value, this.id)">G</button>
+        <button id = "hBtn" class = "keyboardLetters" value = "h" onclick = "lettersClicked(this.value, this.id)">H</button>
+        <button id = "iBtn" class = "keyboardLetters" value = "i" onclick = "lettersClicked(this.value, this.id)">I</button>
+        <button id = "jBtn" class = "keyboardLetters" value = "j" onclick = "lettersClicked(this.value, this.id)">J</button>
+        <button id = "kBtn" class = "keyboardLetters" value = "k" onclick = "lettersClicked(this.value, this.id)">K</button>
+        <button id = "lBtn" class = "keyboardLetters" value = "l" onclick = "lettersClicked(this.value, this.id)">L</button>
+        <button id = "mBtn" class = "keyboardLetters" value = "m" onclick = "lettersClicked(this.value, this.id)">M</button>
+        <button id = "nBtn" class = "keyboardLetters" value = "n" onclick = "lettersClicked(this.value, this.id)">N</button>
+        <button id = "oBtn" class = "keyboardLetters" value = "o" onclick = "lettersClicked(this.value, this.id)">O</button>
+        <button id = "pBtn" class = "keyboardLetters" value = "p" onclick = "lettersClicked(this.value, this.id)">P</button>
+        <button id = "qBtn" class = "keyboardLetters" value = "q" onclick = "lettersClicked(this.value, this.id)">Q</button>
+        <button id = "rBtn" class = "keyboardLetters" value = "r" onclick = "lettersClicked(this.value, this.id)">R</button>
+        <button id = "sBtn" class = "keyboardLetters" value = "s" onclick = "lettersClicked(this.value, this.id)">S</button>
+        <button id = "tBtn" class = "keyboardLetters" value = "t" onclick = "lettersClicked(this.value, this.id)">T</button>
+        <button id = "uBtn" class = "keyboardLetters" value = "u" onclick = "lettersClicked(this.value, this.id)">U</button>
+        <button id = "vBtn" class = "keyboardLetters" value = "v" onclick = "lettersClicked(this.value, this.id)">V</button>
+        <button id = "wBtn" class = "keyboardLetters" value = "w" onclick = "lettersClicked(this.value, this.id)">W</button>
+        <button id = "xBtn" class = "keyboardLetters" value = "x" onclick = "lettersClicked(this.value, this.id)">X</button>
+        <button id = "yBtn" class = "keyboardLetters" value = "y" onclick = "lettersClicked(this.value, this.id)">Y</button>
+        <button id = "zBtn" class = "keyboardLetters" value = "z" onclick = "lettersClicked(this.value, this.id)">Z</button>
     </div>
     <script src="./js/main.js"></script>
 </body>
